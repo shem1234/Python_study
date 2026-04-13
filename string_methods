@@ -8,3 +8,9 @@ text = "    jUnIoR deVelOper   "
 text=text.strip()
 text=text.capitalize()
 print(text)
+
+py=3.14
+radius = 10
+area = py*radius**2
+print(area)
+print(type(area))

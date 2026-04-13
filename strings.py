@@ -9,6 +9,7 @@ print(type(num2))
 full_name=first_name + "  " + last_name
 print(full_name)
 
+# Slicing
 bio = "I am a Software student and I am learning Python Programming"
 
 print(bio[42:60])

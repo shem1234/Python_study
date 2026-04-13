@@ -1,0 +1,10 @@
+
+
+text = "Software Developer in Python"
+text1 = text.split()
+print(text1)
+
+text = "    jUnIoR deVelOper   "
+text=text.strip()
+text=text.capitalize()
+print(text)

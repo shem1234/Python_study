@@ -2,12 +2,9 @@
 # trainees = ["John", [2, ["James","Mary"]]]
 # 1. Display 2 from the list.
 trainees = ["John", [2, ["James","Mary"]]]
-print(trainees[1])
 print(trainees[1][0])
 
 # 2. Output James  from the list.
-print(trainees[1])
-print(trainees[1][1])
 print(trainees[1][1][0])
 
 # 3. Using a method add 56 at the end of the list.
@@ -15,8 +12,6 @@ trainees.append(56)
 print(trainees)
 
 # 4. Using a method add the name Mike between James and Mary
-print(trainees[1])
-print(trainees[1][1])
 print(trainees[1][1][0])
 trainees[1][1].insert(1,"Mike")
 print(trainees)
@@ -27,9 +22,8 @@ trainees[1][0] = 8
 print(trainees)
 
 # 6. Remove John and Mary from the list.
-print(trainees)
 trainees.pop(0)
-print(trainees)
+print(trainees[0][1])
 trainees[0][1].pop(2)
 print(trainees)
 

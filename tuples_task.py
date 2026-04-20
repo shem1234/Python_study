@@ -18,6 +18,10 @@ print(values)
 fruits = ("apple", "banana", "cherry", "banana", "mango", "banana")
 fruits=list(fruits)
 print(fruits.count("banana"))
+fruits.remove("banana")
+fruits.remove("banana")
+fruits.remove("banana")
+print(fruits)
 
 # 4. names = ("Alice", "Bob", "Charlie", "David") Reverse the order of elements using sort method.
 names = ("Alice", "Bob", "Charlie", "David")

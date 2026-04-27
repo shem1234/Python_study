@@ -4,6 +4,7 @@
 #  different salary bands. Create a system that applies
 #  different tax rates depending on salary level and displays
 #  final pay.
+relief = 2400
 salary = int(input("Enter the salary amount: "))
 
 if salary > 800000:
@@ -16,10 +17,12 @@ elif salary >= 24000 and salary <= 32332:
     tax = (salary-24000) * 25/100 + 2400
 else:
     tax = salary * 10/100
+    relief = 0
 
 print("Salary: " + str(salary))
-print("Tax: " + str(int(tax)))
-print("Net pay: " + str(int(salary-tax)))
+print("Tax: " + f"{tax:.2f}")
+print("Relief :" + str(relief))
+print("Net pay: " + f"{salary-tax + relief:.2f}")
 
 # Q2
 # A university hostel manager wants to know whether rooms 

@@ -13,7 +13,9 @@ elif salary >= 24000 and salary <= 32333:
 else:
     tax = salary * 10/100
 
-print("Your salary is " + str(salary) + "and your tax is " + str(int(tax)))
+print("Your salary is " + str(salary))
+print("Tax: " + str(int(tax)))
+print("Net pay: " + str(int(salary-tax)))
 
 # Q2
 # A university hostel manager wants to know whether rooms 
@@ -26,7 +28,7 @@ booking = int(input("Enter the rooms booking: "))
 if booking > rooms:
     res = f"Only {rooms} rooms are available"
 else:
-    res = f"{booking} rooms booked. {rooms - booking} rooms remaining"
+    res = f"{booking} rooms booked. {rooms - booking} rooms available"
 
 print(res)
 
@@ -50,14 +52,13 @@ print(res)
 #  If no drivers are available nearby, inform the customer to 
 # retry later.
 
-driver = input("Are drivers available nearby? Yes/No ")
+driver = int(input("Insert the number of drivers available: "))
 
-if driver == "Yes":
+if driver > 0:
     res = "There is a driver available. Please wait."
-elif driver == "No":
-    res = "Unfortunately there is no driver available. Please try again later."
 else:
-    res = "Please enter Yes/No when prompted"
+    res = "Unfortunately there is no driver available. Please try again later."
+
 
 print(res)
 

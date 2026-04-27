@@ -6,14 +6,18 @@
 #  final pay.
 salary = int(input("Enter the salary amount: "))
 
-if salary > 32333:
-    tax = (salary-32333) * 30/100 + 2400 + 2083.25
-elif salary >= 24000 and salary <= 32333:
+if salary > 800000:
+    tax = (salary-800000) * 35/100 + 97500 + 140300.10 + 2083.25 + 2400
+elif salary >= 500000 and salary <= 800000:
+    tax = (salary-500000) * 32.5/100 + 140300.10 + 2083.25 + 2400
+elif salary >= 32333 and salary <= 499999:
+    tax = (salary-32333) * 30/100 + 2083.25 + 2400
+elif salary >= 24000 and salary <= 32332:
     tax = (salary-24000) * 25/100 + 2400
 else:
     tax = salary * 10/100
 
-print("Your salary is " + str(salary))
+print("Salary: " + str(salary))
 print("Tax: " + str(int(tax)))
 print("Net pay: " + str(int(salary-tax)))
 
@@ -24,6 +28,7 @@ print("Net pay: " + str(int(salary-tax)))
 rooms = 50
 
 booking = int(input("Enter the rooms booking: "))
+
 
 if booking > rooms:
     res = f"Only {rooms} rooms are available"

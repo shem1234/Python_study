@@ -1,0 +1,10 @@
+driver = input("Are drivers available nearby? Yes/No ")
+
+if driver == "Yes":
+    res = "There is a driver available. Please wait."
+elif driver == "No":
+    res = "Unfortunately there is no driver available. Please try again later."
+else:
+    res = "Please enter Yes/No when prompted"
+
+print(res)

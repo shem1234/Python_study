@@ -60,13 +60,14 @@ print(res)
 #  If no drivers are available nearby, inform the customer to 
 # retry later.
 
-driver = int(input("Insert the number of drivers available: "))
+driver = input("Confirm that drivers are available - Yes/No: ")
 
-if driver > 0:
+if driver == "Yes":
     res = "There is a driver available. Please wait."
-else:
+elif driver == "No":
     res = "Unfortunately there is no driver available. Please try again later."
-
-
+else:
+    res = "Please enter Yes or No."
+    
 print(res)
 

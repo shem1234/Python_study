@@ -69,3 +69,5 @@ for i in list1:
 
 print(total)                         
 
+
+

@@ -1,9 +1,0 @@
-x = 7
-y = 13
-
-if x % 2 == 0 and y % 2 == 0:
-    print("x and y are both even")
-elif x % 2 != 0 and y % 2 == 0:
-    print("Only y is even")
-elif x % 2 != 0 and y % 2 != 0:
-    print("Neither x nor y are even")

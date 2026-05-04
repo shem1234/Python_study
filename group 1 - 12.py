@@ -55,8 +55,6 @@ data  = {"username": "shem", "pin": 1234}
 user = input("Enter your user name: ")
 pin = input("Enter your password: ")
 
-print(user + str(pin))
-
 if  user == data["username"] and pin == str(data["pin"]):
     var = f"Welcome {data["username"]}"
 else:

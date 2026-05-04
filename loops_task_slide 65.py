@@ -61,11 +61,9 @@ print(counter)
 # Display the total quantity of the 3 above.
 list1 = [ ("Jay", "20"), ("Mo", "30"), ("Mya", "32") ]
 total = 0
-number = 0
 
 for i in list1:
-    total = total + int(list1[number][1])
-    number = number + 1
+    total = total + int(i[1])
 
 print(total)                         
 

@@ -68,6 +68,19 @@ else:
 
 print(res)
 
+# with function
+def verify(emaila):
+    if "@" in emaila and "." in emaila:
+        return "Valid email"
+    else:
+        return "invalid email"
+    
+
+email = input("Enter your email: ")
+
+res = verify(email)
+print(res)
+
 # TASK 5: Using Python or PHP or Java or Ruby or JavaScript
 # Implement a program that takes 3 users  inputs from the terminal or the Browser, and stores them in three variables.
 #  Return the largest of the three. Do this without using the the inbuilt max () function!
@@ -108,61 +121,44 @@ while i < counter:
 # Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
 # A > 79 , B - 60 to 79, C  > 49 to 59, D - 40 to 49, E - less 40
 # Once you learn functions,revisit this and write this code inside a function.
-mark = 0
+student_marks = int(input("Enter student marks: "))
 
-invalid = 0
-i = 0
-while i < 5 and invalid < 5:
-    marks1 = int(input("Enter the first marks: "))
-    if marks1 >= 0 and marks1 <= 100:
-        mark = mark + marks1
-        i = 6
-        invalid = 0
+if student_marks >=0 and student_marks <= 100:
+    if student_marks > 79:
+        grade = "A"
+    elif student_marks >= 60 and student_marks <= 79:
+        grade = "B"
+    elif student_marks > 49 and student_marks <= 59:
+        grade = "C"
+    elif student_marks >= 40 and student_marks <= 49:
+        grade = "D"
     else:
-        print("Invalid marks. Please enter a mark between 0 and 100")
-        i = i + 1
-        invalid = i
-
-while i < 11 and invalid < 5:
-    marks2 = int(input("Enter the second marks: "))
-    if marks2 >= 0 and marks2 <= 100:
-        mark = mark + marks2
-        i = 12
-        invalid = 0
-    else:
-        print("Invalid marks. Please enter a mark between 0 and 100")
-        i = i + 1
-        invalid = i
-
-while i <= 17 and invalid < 5:
-    marks3 = int(input("Enter the third marks: "))
-    if marks3 >= 0 and marks3 <= 100:
-        mark = mark + marks3
-        i = 18
-        invalid = 0
-    else:
-        print("Invalid marks. Please enter a mark between 0 and 100")
-        i = i + 1
-        invalid = i
-
-if invalid != 0:
-    print("You have entered too many invalid marks. Process terminated")
+        grade = "E"
 else:
-    average = mark/3
+    grade = "Invalid marks. Please enter a mark between 0 and 100"
 
-    if average > 79:
-        grade = "Grade A"
-    elif average >= 60 and average <= 79:
-        grade = "Grade B"
-    elif average >= 49 and average <= 59:
-        grade = "Grade C"
-    elif average >= 40 and average <= 49:
-        grade = "Grade D"
+print(grade)
+
+# with funcion
+def find_grade(marks):
+    if marks >=0 and marks <= 100:
+        if student_marks > 79:
+            return "A"
+        elif marks >= 60 and marks <= 79:
+            return "B"
+        elif marks > 49 and marks <= 59:
+            return "C"
+        elif marks >= 40 and marks <= 49:
+            return "D"
+        else:
+            return "E"
     else:
-        grade = "Grade E"
-    
-    print(grade)
+        return "Invalid marks. Please enter a mark between 0 and 100"
 
+student_marks = int(input("Enter student marks: "))
+find_grade(student_marks)
+print(find_grade(student_marks))
+    
 # TASK 8: Using Python or PHP or Java or Ruby or JavaScript
 # Write a program that takes as input the speed of a car e.g 80. If the speed is less than 70, it should print “Ok”. Otherwise, for
 #  every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
@@ -230,19 +226,32 @@ while i < number:
 # NB: ONCE YOU COPY AND PASTE THE LIST ABOVE,REWRITE THE SINGLE QUOTES AS THE ABOVE LIST WILL GIVE YOU AN ERROR.
 # Once you learn functions,revisit this and write this code inside a function.
 prods = [["omo","30kshs",300],["milk","50kshs",200],["bread","45kshs",359],["coffee","5kshs",79]]
-stock = 0
+
+total_stock = 0
 
 for i in prods:
-    stock = stock + i[2]
+    total_stock = total_stock + int(i[-1])
 
-print(stock)
+print(total_stock)
+
+# with function
+def calc_total_stock(my_list):
+    total_stock = 0
+
+    for i in my_list:
+        total_stock = total_stock + int(i[-1])
+    
+    return total_stock
+
+prods = [["omo","30kshs",300],["milk","50kshs",200],["bread","45kshs",359],["coffee","5kshs",79]]
+stock1=(calc_total_stock(prods))
+print(stock1)
 
 # TASK 11: Using Python or PHP or Java or Ruby or JavaScript
 # Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days TODAY.datetime
 # Once you learn functions,revisit this and write this code inside a function.
 import datetime
 
-# today's date
 x = datetime.datetime.now()
 
 print(x.year)
@@ -251,10 +260,8 @@ print(x.day)
 
 date_str = input("Enter date (YYYY-MM-DD): ")
 
-# Step 2: convert string → datetime object
 date_obj = datetime.datetime.strptime(date_str, "%Y-%m-%d")
 
-# Step 3: extract parts
 year = date_obj.year
 month = date_obj.month
 day = date_obj.day
@@ -296,6 +303,26 @@ else:
     largest = number4
     
 print(largest)
+
+# with function
+def check(number1,number2,number3,number4):
+    if number1 >= number2 and number1 >= number3 and number1 >= number4:
+        return number1
+    elif number2 >= number1 and number2 >= number3 and number2 >= number4:
+        return number2
+    elif number3 >= number1 and number3 >= number2 and number3 >= number4:
+        return number3
+    else:
+        return number4
+
+number1 = int(input("Enter the first number: "))
+number2 = int(input("Enter the second number: "))
+number3 = int(input("Enter the third number: "))
+number4 = int(input("Enter the fourth number: "))
+
+check(number1,number2,number3,number4)
+res = check(number1,number2,number3,number4)    
+print(res)
 
 # TASK 13: Using Python or PHP or Java or Ruby or JavaScript or C# or Go
 # Write a program that takes the email and password as input from a user and checks if they are equal to “admin@mail.com” and

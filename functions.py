@@ -3,7 +3,7 @@ def hello():
 
 hello()
 
-# calculate the ares od a trianbgle
+# calculate the areas of a trianbgle
 
 def triangle_area():
     base = 10
